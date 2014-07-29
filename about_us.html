@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Sinaye Dabe</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            body {
+                /*  padding: 10%;  */
+                margin-left: 10%;
+                margin-right: 10%;
+                background-color: whitesmoke;
+            }
+            header {
+                font-size: 40px;
+                height: 100px;    
+            } 
+            .headSet {
+                padding: 0px;
+                background-color: #FFCC99;
+                border: 10px solid #FFFFFF;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                width: 90%;
+            }
+            .navSet {
+                border-top: none;
+            }
+            .menuItem  {
+                background-color: #FFCC99;
+                color: whitesmoke;
+                font-family: cursive;
+                font-size: 20px;
+                padding-left: 15px;
+            }
+            img {
+                float: right;
+            }
+            #content {
+                width: 89%;
+                background-color: #FF9999;
+                padding: 15px;
+                margin: 0px;
+                margin-left: 10px;
+            }
+            #headerText {
+                font-family: cursive;
+                height: 100px;
+                padding-top: 10px;
+
+            }
+
+        </style>
+        <script src="js/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                //Part 2
+                // Modify any DOM element
+                $('#headerText').html('CHANGED');
+                $('#headerText').css('color', '#FF9999');
+                $('aside').css('float', 'right');
+                $('p').css('font-weight', 'bold');
+                 $('.more').html('alot of text to go here');
+              //  $('aside').
+                //Part 1
+                //Find any DOM element 
+                var avar = $('body').find('footer');
+                console.log("avar has the value " + avar.text());
+     //         to see it in action uncomment the following line           
+     //           $('#headerText').html(avar.text());
+                //Part 3
+                // We can add elemets that was not there befor
+                //Part 3
+                // We can respond  user interaction on any element
+                $("footer").click(function() {
+                    //And then change any html element
+                    $('#headerText').html(avar.text());
+                });
+                
+                $(".menuItem").mouseenter(function(){
+                    $(this).css('color', '#FF9999');
+                });
+                $(".menuItem").mouseleave(function(){
+                    $(this).css('color', 'white');
+                });
+                $(".menuItem").click(function(){
+                   // alert("Go to " + $(this).text());
+                   var fileName = $(this).text() + ".html";
+                    window.open(fileName);
+                });
+
+                //Part 5
+                // We can call external services
+                //Part 6
+                // Simplify common JavaScript tasks
+                $('footer').addClass('headSet');
+            });
+        </script>
+    </head>
+    <body>  
+
+        <header class='headSet'> 
+            <!-- Even though it seems straight forward at first
+            to place  an the text of the header next the image of the header
+            -->
+            <span id="headerText">This is header</span>
+            <!-- Even though we style the size of the image in HTML we 
+            still resize an actual copy of the file.
+            Why? -->
+            <img src="images/foto2.jpg" width="100" height="100" 
+                 alt="Pencils"/>           
+            <div style="clear: right"> </div>
+        </header>
+        <nav class='headSet navSet'>
+            <span class="menuItem" id='home_menu'><a href="/index.ntml">Home</span></a>
+            <span class="menuItem"><a href="/content.html"> Content</span></a>
+            <span class="menuItem" id='gallery_menu'><a href="/gallery.html">Gallery</span></a>
+            <span class="menuItem"><a href="/about_us.html">About Us</span></a>
+        </nav>
+        <div id='content'>
+            <aside>
+                <p class="more">Side bar for <br/>
+                    Adverts
+                </p>
+            </aside>
+            <article>
+                <h1>About Us</h1><br/>
+                <p>Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown 
+                    printer took a galley of type and scrambled it to make a type
+                    specimen book. </p>
+            </article>
+        </div>
+        <footer >The footer</footer>
+    </body>
+</html>

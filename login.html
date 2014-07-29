@@ -1,0 +1,44 @@
+<script language="javascript">
+
+/*This Script allows users to login tohe website using a form that asks for a
+Username and Password*/
+
+function pasuser(form) {
+if (form.id.value=="Johnson") { 
+if (form.pass.value=="apple") {              
+location="index.html" 
+} else {
+alert("Invalid Password")
+}
+} else { location="response.html" 
+}
+}
+
+</script>
+<script language="javascript">
+
+function pasuser2(form) {
+if (form.id.value2=="Jackson") { 
+if (form.pass.value2=="orange") {              
+location="index.html" 
+} else {
+alert("Invalid Password")
+}
+} else { location="response.html" 
+}
+}
+
+
+</script>
+
+<center>
+<table bgcolor="#FFCC99" cellpadding="12" border="1">
+<tr><td colspan="2"><center><h1><b>Login
+Area</b></h1></center></td></tr>
+<tr><td><h1><b>User Name:</b></h1></td><td><form name="login"><input
+name="id" type="text"></td></tr>
+<tr><td><h1><b>Password:</b></h1></td><td><input name="pass"
+type="password"></td></tr>
+<tr><td><center><input type="button" value="Login"
+onClick="pasuser(this.form)"></center></td><td><center><br><input
+type="Reset"></form></td></tr></table></center> 
